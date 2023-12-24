@@ -16,13 +16,18 @@ const Home = () => {
   };
 
   // Search for blog by category
-  const handleSearchResults = () => {
-    const allBlogs = blogList;
-    const filteredBlogs = allBlogs.filter((blog) =>
-      blog.category.toLowerCase().includes(searchKey.toLowerCase().trim())
-    );
-    setBlogs(filteredBlogs);
-  };
+  // Search for blog by category
+const handleSearchResults = () => {
+  const allBlogs = blogList;
+  const filteredBlogs = allBlogs.filter((blog) =>
+    blog.category.toLowerCase().includes(searchKey.toLowerCase().trim())
+  );
+
+  console.log('Filtered Blogs:', filteredBlogs);
+
+  setBlogs(filteredBlogs);
+};
+
 
   // Clear search and show all blogs
   const handleClearSearch = () => {
